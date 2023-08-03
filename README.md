@@ -70,5 +70,5 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `id` (in URL) | `string` | **Required**. Document ID of the email to retrieve |
+| `id` (in URL) | `string` | **Required**. Document ID of the email to delete |
 
