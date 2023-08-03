@@ -74,6 +74,7 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 | `id` (in URL) | `string` | **Required**. Document ID of the email to retrieve |
 
 
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
