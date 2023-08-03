@@ -9,7 +9,6 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 - Email Provider: Nodemailer
 - libraries: Node-Scheduler, Mongoose, Morgan, Helmet, and Joi
 
-
 ## API Reference
 
 #### Schedule an email
@@ -39,7 +38,6 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 | `page`      |  **Optional**. Page number for paginated results (default: 1) |
 | `limit`      |  **Optional**. Number of results per page (default: 10) |
 
-
 #### Reschedule an email
 
 ```http
@@ -48,8 +46,29 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `id` (in URL) | `string` | **Required**. MongoDB document ID of the email to be rescheduled |
+| `id` (in URL) | `string` | **Required**. Document ID of the email to be rescheduled |
 | `toEmail` | `string` | **Optional**. Recipient's email address |
 | `subject` | `string` | **Optional**. Email subject. Max length: 75 characters. |
 | `text` | `string` | **Optional**. Email content |
 | `scheduledAt` | `string` | **Optional**. Scheduled sending date in ISO format. |
+
+#### Get an email by Id
+
+```http
+  GET /api/v1/emails/:id
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` (in URL) | `string` | **Required**. Document ID of the email to retrieve |
+
+#### Delete an scheduled email
+
+```http
+  DELETE /api/v1/emails/:id
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` (in URL) | `string` | **Required**. Document ID of the email to retrieve |
+
