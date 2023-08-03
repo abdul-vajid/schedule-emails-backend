@@ -1,4 +1,4 @@
-## **Technical Assignment - Backend Developer**
+# **Technical Assignment - Backend Developer**
 
 This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node-Scheduler. The API enables email scheduling and management, allowing users to effortlessly schedule, reschedule, list, update, and delete email sending tasks.
 
@@ -8,6 +8,7 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 - Database: MongoDB
 - Email Provider: Nodemailer
 - libraries: Node-Scheduler, Mongoose, Morgan, Helmet, and Joi
+
 
 ## API Reference
 
@@ -70,5 +71,20 @@ This repository contains APIs built using Node.js, MongoDB, Nodemailer, and Node
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `id` (in URL) | `string` | **Required**. Document ID of the email to delete |
+| `id` (in URL) | `string` | **Required**. Document ID of the email to retrieve |
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`PORT` The port number that the server will listen on
+
+`MONGO_URI`: The MongoDB connection string or URI that your application will use to connect to the database
+
+`CLIENT_URL`: The URL of the client application that will communicate with the server. This is required for Cross-Origin Resource Sharing (CORS) settings.
+
+`GMAIL_USERNAME`: The Gmail username or email address that will be used as the sender for sending emails using Nodemailer.
+
+`GMAIL_SECURITY_PIN`: The application-specific password for the Gmail account. This is needed to authenticate the email sender using Nodemailer.
 
